@@ -3,6 +3,7 @@
     <metadata>
         <id>KarmaGruntJSUnit.MSBuild</id>
         <version>1.0.0.0</version>
+        <title>Karma And Grunt JavaScript UnitTest Runner</title>
         <authors>Manish Kumar</authors>
         <owners>Manish Kumar</owners>
         <licenseUrl>https://bitbucket.org/Manishkp/karmagruntjsunit.msbuild/raw/a4e428f8cfbc4a927b35f91cdaee5e324da1ffeb/license.txt</licenseUrl>
@@ -15,6 +16,7 @@
         <releaseNotes>NOTE: this nuget package needs Node to be installed on your machine</releaseNotes>
         <copyright>Copyright (c) Manish Kumar</copyright>
         <language>en-US</language>
+        <tags>JavaScript; Unit test; Jasmine; Karma; Grunt</tags>
         <dependencies>
             <dependency id="AngularJS.Core" version="1.2.9" />
             <dependency id="jasmine-js" version="1.0.0" />
