@@ -1,4 +1,9 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <BuildDependsOn>$(BuildDependsOn);NpmInstall;RunGrunt</BuildDependsOn>
+    <RebuildDependsOn>$(RebuildDependsOn);NpmInstall;RunGrunt</RebuildDependsOn>
+  </PropertyGroup>
+
    <Target Name="RunGrunt">
     <Exec ContinueOnError="false" WorkingDirectory="$(ProjectDir)" Command="./node_modules/.bin/grunt --no-color" IgnoreExitCode="true" ConsoleToMSBuild="true">
       <Output TaskParameter="ConsoleOutput" PropertyName="GruntOutput" />
