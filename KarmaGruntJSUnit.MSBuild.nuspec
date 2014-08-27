@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package>
+  <metadata minClientVersion="2.7">
+    <id>KarmaGruntJSUnit.MSBuild</id>
+    <version>1.0.0.0</version>
+    <authors>Manish Kumar</authors>
+    <owners>Manish Kumar</owners>  
+    <projectUrl>https://bitbucket.org/manishkp/karmagruntjsunit.msbuild</projectUrl>
+    <iconUrl>https://bitbucket.org/manishkp/karmagruntjsunit.msbuild/img/Karma.jpg</iconUrl>
+    <licenseUrl>https://bitbucket.org/manishkp/stylecop-msbuild/src/license.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Adds Karma and Grunt scripts to your project and runs the Javascript unit test as part of the build</summary>
+    <description>Adds Karma and Grunt scripts to your project and runs the Javascript unit test as part of the build</description>
+    <releaseNotes></releaseNotes>
+    <language>en-US</language>
+    <copyright>Copyright (c) Manish Kumar (manishkp@gmail.com)</copyright>
+    <developmentDependency>true</developmentDependency>
+  </metadata>
+  <files>
+    <file src="license.txt" target="license.txt" />
+    <file src="build\**\*.*" target="build" />
+    <file src="tools\**\*.*" target="tools" />
+  </files>
+</package>
