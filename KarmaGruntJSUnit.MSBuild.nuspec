@@ -19,6 +19,5 @@
   <files>
     <file src="license.txt" target="license.txt" />
     <file src="build\**\*.*" target="build" />
-    <file src="tools\**\*.*" target="tools" />
   </files>
 </package>

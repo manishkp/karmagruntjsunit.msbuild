@@ -1,0 +1,15 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <Target Name="RunGrunt">
+    <Exec ContinueOnError="false" WorkingDirectory="$(ProjectDir)" Command="./node_modules/.bin/grunt --no-color" IgnoreExitCode="true" ConsoleToMSBuild="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="GruntOutput" />
+      <Output TaskParameter="ExitCode" PropertyName="GruntExitCode" />
+    </Exec>
+    <PropertyGroup>
+      <ErrorText>One or more JavaScript Unit Tests have Failed : {0}</ErrorText>
+    </PropertyGroup>
+    <Error Condition="'$(GruntExitCode)' != '0'" Text="$([System.String]::Format('$(ErrorText)', '$(GruntOutput)'))" />
+  </Target>
+  <Target Name="NpmInstall">
+    <Exec ContinueOnError="false" WorkingDirectory="$(ProjectDir)" Command="npm install" ConsoleToMSBuild="true" />
+  </Target>
+</Project>
