@@ -1,18 +1,23 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <BuildDependsOn>$(BuildDependsOn);NpmInstall;RunGrunt</BuildDependsOn>
-    <RebuildDependsOn>$(RebuildDependsOn);NpmInstall;RunGrunt</RebuildDependsOn>
+    <BuildDependsOn>$(BuildDependsOn);NpmInstall;RunGrunt;ShowResults</BuildDependsOn>
+    <RebuildDependsOn>$(RebuildDependsOn);NpmInstall;RunGrunt;ShowResults</RebuildDependsOn>
   </PropertyGroup>
 
-   <Target Name="RunGrunt">
+   <Target Name="RunGrunt" DependsOnTargets="NpmInstall">
     <Exec ContinueOnError="false" WorkingDirectory="$(ProjectDir)" Command="./node_modules/.bin/grunt --no-color" IgnoreExitCode="true" ConsoleToMSBuild="true">
       <Output TaskParameter="ConsoleOutput" PropertyName="GruntOutput" />
       <Output TaskParameter="ExitCode" PropertyName="GruntExitCode" />
-    </Exec>
+    </Exec>    
+  </Target>
+ <Target Name="ShowResults" DependsOnTargets="RunGrunt">   
+    <XmlPeek XmlInputPath="$(ProjectDir)\test-results.testxml" Query="/Tests/Test[Outcome='Failed']">
+	    <Output TaskParameter="Result" ItemName="Peeked" />
+    </XmlPeek>   
     <PropertyGroup>
-      <ErrorText>One or more JavaScript Unit Tests have Failed : {0}</ErrorText>
-    </PropertyGroup>
-    <Error Condition="'$(GruntExitCode)' != '0'" Text="$([System.String]::Format('$(ErrorText)', '$(GruntOutput)'))" />
+      <TestResults>'@(Peeked)'</TestResults>    
+    </PropertyGroup> 
+    <Error Condition="'$(GruntExitCode)' != '0'" Text="One or more JavaScript Unit Tests have Failed. Errors: @(Peeked)" />
   </Target>
   <Target Name="NpmInstall">
     <Exec ContinueOnError="false" WorkingDirectory="$(ProjectDir)" Command="npm install" ConsoleToMSBuild="true" />
