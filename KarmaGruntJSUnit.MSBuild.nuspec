@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>KarmaGruntJSUnit.MSBuild</id>
-        <version>1.0.0.2</version>
+        <version>1.0.3</version>
         <title>Karma And Grunt JavaScript UnitTest Runner</title>
         <authors>Manish Kumar</authors>
         <owners>Manish Kumar</owners>
@@ -25,7 +25,8 @@ Add references to source js files in Karma.conf.js, eg:
 It uses Jasmine as test framework.</summary>
         <releaseNotes>NOTE: this nuget package needs NodeJS to be installed on your machine.
 1.0.0.1 : Fixed Basic MSBuild Target Issue.
-1.0.0.2 : Improved Error Reporting in VS Errors list</releaseNotes>
+1.0.0.2 : Improved Error Reporting in VS Errors list
+1.0.3 : Nuget packages only support 3 digit version number</releaseNotes>
         <copyright>Copyright (c) Manish Kumar</copyright>
         <language>en-US</language>
         <tags>JavaScript; Unit test; Jasmine; Karma; Grunt</tags>
