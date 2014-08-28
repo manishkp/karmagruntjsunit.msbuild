@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>KarmaGruntJSUnit.MSBuild</id>
-        <version>1.0.0.1</version>
+        <version>1.0.0.2</version>
         <title>Karma And Grunt JavaScript UnitTest Runner</title>
         <authors>Manish Kumar</authors>
         <owners>Manish Kumar</owners>
@@ -11,9 +11,21 @@
         <iconUrl>https://bytebucket.org/Manishkp/karmagruntjsunit.msbuild/raw/a4e428f8cfbc4a927b35f91cdaee5e324da1ffeb/img/Karma.jpg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <developmentDependency>true</developmentDependency>
-        <description>Adds Karma and Grunt scripts to your project and runs the Javascript unit test as part of the build</description>
-        <summary>Adds Karma and Grunt scripts to your project and runs the Javascript unit test as part of the build</summary>
-        <releaseNotes>NOTE: this nuget package needs Node to be installed on your machine</releaseNotes>
+        <description>Adds Karma and Grunt scripts to your project and runs the Javascript unit test as part of the build.
+
+One needs to add the test files inside TestScripts Folder.
+Add references to source js files in Karma.conf.js, eg:
+ files: [
+      'Scripts/angular.js',
+      'Scripts/angular-*.js',     
+       'Sources/*.js',
+      'TestScripts/*.js'
+    ],</description>
+        <summary>Adds Karma and Grunt scripts to your project and runs the Javascript unit test as part of the build.
+It uses Jasmine as test framework.</summary>
+        <releaseNotes>NOTE: this nuget package needs NodeJS to be installed on your machine.
+1.0.0.1 : Fixed Basic MSBuild Target Issue.
+1.0.0.2 : Improved Error Reporting in VS Errors list</releaseNotes>
         <copyright>Copyright (c) Manish Kumar</copyright>
         <language>en-US</language>
         <tags>JavaScript; Unit test; Jasmine; Karma; Grunt</tags>
