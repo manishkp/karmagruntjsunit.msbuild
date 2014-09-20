@@ -1,4 +1,7 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Specify where tasks are implemented. -->
+  <UsingTask AssemblyFile="$(MSBuildThisFileDirectory)..\tools\KarmaGruntErrorReporter.MSBuild.dll" TaskName="GruntErrorReporterTask"/>
+
   <PropertyGroup>
     <BuildDependsOn>$(BuildDependsOn);NpmInstall;RunGrunt;ShowResults</BuildDependsOn>
     <RebuildDependsOn>$(RebuildDependsOn);NpmInstall;RunGrunt;ShowResults</RebuildDependsOn>
@@ -10,14 +13,12 @@
       <Output TaskParameter="ExitCode" PropertyName="GruntExitCode" />
     </Exec>    
   </Target>
- <Target Name="ShowResults" DependsOnTargets="RunGrunt">   
-    <XmlPeek XmlInputPath="$(ProjectDir)\test-results.testxml" Query="/Tests/Test[Outcome='Failed']">
-	    <Output TaskParameter="Result" ItemName="Peeked" />
-    </XmlPeek>   
-    <PropertyGroup>
-      <TestResults>'@(Peeked)'</TestResults>    
-    </PropertyGroup> 
-    <Error Condition="'$(GruntExitCode)' != '0'" Text="One or more JavaScript Unit Tests have Failed. Errors: @(Peeked)" />
+ <Target Name="ShowResults" DependsOnTargets="RunGrunt">    
+    <!-- Run the StyleCop MSBuild task. -->
+    <GruntErrorReporterTask
+      ProjectFullPath="$(MSBuildProjectDirectory)"
+      GruntOutput ="$(GruntOutput)">
+    </GruntErrorReporterTask>
   </Target>
   <Target Name="NpmInstall">
     <Exec ContinueOnError="false" WorkingDirectory="$(ProjectDir)" Command="npm install" ConsoleToMSBuild="true" />

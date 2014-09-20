@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>KarmaGruntJSUnit.MSBuild</id>
-        <version>1.0.3</version>
+        <version>1.0.4</version>
         <title>Karma And Grunt JavaScript UnitTest Runner</title>
         <authors>Manish Kumar</authors>
         <owners>Manish Kumar</owners>
@@ -42,6 +42,7 @@ It uses Jasmine as test framework.</summary>
         <file src="content\Gruntfile.js" target="content\Gruntfile.js" />
         <file src="content\karma.conf.js" target="content\karma.conf.js" />
         <file src="content\package.json" target="content\package.json" />
+	<file src="tools\KarmaGruntErrorReporter.MSBuild.dll" target="tools\KarmaGruntErrorReporter.MSBuild.dll" />
         <file src="license.txt" target="license.txt" />
     </files>
 </package>

@@ -1,0 +1,6 @@
+source/Test/node_modules/
+source/Test/scripts/
+source/packages/
+source/Test/obj/
+source/Test/bin/
+source/Test/test-results.testxml
