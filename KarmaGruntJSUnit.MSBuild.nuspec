@@ -9,7 +9,7 @@
         <licenseUrl>https://bitbucket.org/Manishkp/karmagruntjsunit.msbuild/raw/a4e428f8cfbc4a927b35f91cdaee5e324da1ffeb/license.txt</licenseUrl>
         <projectUrl>https://bitbucket.org/manishkp/karmagruntjsunit.msbuild</projectUrl>
         <iconUrl>https://bytebucket.org/Manishkp/karmagruntjsunit.msbuild/raw/a4e428f8cfbc4a927b35f91cdaee5e324da1ffeb/img/Karma.jpg</iconUrl>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <developmentDependency>true</developmentDependency>
         <description>Adds Karma and Grunt scripts to your project and runs the Javascript unit test as part of the build.
 
@@ -26,7 +26,8 @@ It uses Jasmine as test framework.</summary>
         <releaseNotes>NOTE: this nuget package needs NodeJS to be installed on your machine.
 1.0.0.1 : Fixed Basic MSBuild Target Issue.
 1.0.0.2 : Improved Error Reporting in VS Errors list
-1.0.3 : Nuget packages only support 3 digit version number</releaseNotes>
+1.0.3 : Nuget packages only support 3 digit version number
+1.0.4 : Updating the error reporting.</releaseNotes>
         <copyright>Copyright (c) Manish Kumar</copyright>
         <language>en-US</language>
         <tags>JavaScript; Unit test; Jasmine; Karma; Grunt</tags>
@@ -42,7 +43,7 @@ It uses Jasmine as test framework.</summary>
         <file src="content\Gruntfile.js" target="content\Gruntfile.js" />
         <file src="content\karma.conf.js" target="content\karma.conf.js" />
         <file src="content\package.json" target="content\package.json" />
-	<file src="tools\KarmaGruntErrorReporter.MSBuild.dll" target="tools\KarmaGruntErrorReporter.MSBuild.dll" />
+        <file src="tools\KarmaGruntErrorReporter.MSBuild.dll" target="tools\KarmaGruntErrorReporter.MSBuild.dll" />
         <file src="license.txt" target="license.txt" />
     </files>
 </package>
