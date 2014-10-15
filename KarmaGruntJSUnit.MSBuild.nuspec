@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>KarmaGruntJSUnit.MSBuild</id>
-        <version>1.0.5</version>
+        <version>1.0.6</version>
         <title>Karma And Grunt JavaScript UnitTest Runner</title>
         <authors>Manish Kumar</authors>
         <owners>Manish Kumar</owners>
@@ -31,11 +31,7 @@ It uses Jasmine as test framework.</summary>
         <copyright>Copyright (c) Manish Kumar</copyright>
         <language>en-US</language>
         <tags>JavaScript; Unit test; Jasmine; Karma; Grunt</tags>
-        <dependencies>
-            <dependency id="AngularJS.Core" version="1.2.9" />
-            <dependency id="jasmine-js" version="1.0.0" />
-            <dependency id="jQuery" version="2.1.1" />
-        </dependencies>
+        <dependencies />
     </metadata>
     <files>
         <file src="build\KarmaGruntJSUnit.MSBuild.Targets" target="build\KarmaGruntJSUnit.MSBuild.Targets" />

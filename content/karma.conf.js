@@ -14,17 +14,14 @@ module.exports = function(config) {
 
 
     // list of files / patterns to load in the browser
-    files: [
-      'Scripts/angular.js',
-      'Scripts/angular-*.js',     
+    files: [    
       'TestScripts/*.js'
     ],
 
 
     // list of files to exclude
     exclude: [
-       'Scripts/*.min.js',
-       'Scripts/angular-kendo*.js'
+       'Scripts/*.min.js'      
     ],
 
 

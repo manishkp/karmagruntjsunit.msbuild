@@ -43,28 +43,19 @@
   <ItemGroup>
     <Content Include="Gruntfile.js" />
     <Content Include="karma.conf.js" />
-    <Content Include="scripts\angular-mocks.js" />
-    <Content Include="scripts\angular.js" />
-    <Content Include="scripts\angular.min.js" />
-    <Content Include="scripts\jasmine.js" />
-    <Content Include="scripts\jquery-2.1.1.intellisense.js" />
-    <Content Include="scripts\jquery-2.1.1.js" />
-    <Content Include="scripts\jquery-2.1.1.min.js" />
     <Content Include="TestScripts\DefaultTest.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="package.json" />
     <None Include="packages.config" />
-    <None Include="scripts\angular.min.js.map" />
-    <None Include="scripts\jquery-2.1.1.min.map" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\packages\KarmaGruntJSUnit.MSBuild.1.0.4\build\KarmaGruntJSUnit.MSBuild.Targets" Condition="Exists('..\packages\KarmaGruntJSUnit.MSBuild.1.0.4\build\KarmaGruntJSUnit.MSBuild.Targets')" />
+  <Import Project="..\packages\KarmaGruntJSUnit.MSBuild.1.0.6\build\KarmaGruntJSUnit.MSBuild.Targets" Condition="Exists('..\packages\KarmaGruntJSUnit.MSBuild.1.0.6\build\KarmaGruntJSUnit.MSBuild.Targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\KarmaGruntJSUnit.MSBuild.1.0.4\build\KarmaGruntJSUnit.MSBuild.Targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\KarmaGruntJSUnit.MSBuild.1.0.4\build\KarmaGruntJSUnit.MSBuild.Targets'))" />
+    <Error Condition="!Exists('..\packages\KarmaGruntJSUnit.MSBuild.1.0.6\build\KarmaGruntJSUnit.MSBuild.Targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\KarmaGruntJSUnit.MSBuild.1.0.6\build\KarmaGruntJSUnit.MSBuild.Targets'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
