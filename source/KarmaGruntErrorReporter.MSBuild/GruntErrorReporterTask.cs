@@ -1,9 +1,9 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="KarmaGruntErrorReporterTask.cs" company="">
+// <copyright file="GruntErrorReporterTask.cs" company="NA">
 //   KarmaGruntErrorReporterTask
 // </copyright>
 // <summary>
-//   Build task to convert Resource file to Java script Object Notation file
+//   Build task to Grunt errors in XML to console errors in VS
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -17,7 +17,7 @@ namespace KarmaGruntErrorReporter.MSBuild
     using Microsoft.Build.Framework;
 
     /// <summary>
-    /// Build task to convert Resource file to Java script Object Notation file
+    /// Build task to Grunt errors in XML to console errors in VS
     /// </summary>
     public class GruntErrorReporterTask : ITask
     {
@@ -43,7 +43,7 @@ namespace KarmaGruntErrorReporter.MSBuild
         public string ProjectFullPath { get; set; }
 
         /// <summary>
-        /// Gets or Sets Grunt Output
+        /// Gets or sets Grunt Output
         /// </summary>
         [Required]
         public string GruntOutput { get; set; }
