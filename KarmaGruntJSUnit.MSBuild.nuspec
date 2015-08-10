@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>KarmaGruntJSUnit.MSBuild</id>
-        <version>1.0.6</version>
+        <version>1.0.7</version>
         <title>Karma And Grunt JavaScript UnitTest Runner</title>
         <authors>Manish Kumar</authors>
         <owners>Manish Kumar</owners>
@@ -27,7 +27,8 @@ It uses Jasmine as test framework.</summary>
 1.0.0.1 : Fixed Basic MSBuild Target Issue.
 1.0.0.2 : Improved Error Reporting in VS Errors list
 1.0.3 : Nuget packages only support 3 digit version number
-1.0.4 : Updating the error reporting.</releaseNotes>
+1.0.4 : Updating the error reporting.
+1.0.7 : Marking the project to continue building to next projects if there are errors.</releaseNotes>
         <copyright>Copyright (c) Manish Kumar</copyright>
         <language>en-US</language>
         <tags>JavaScript; Unit test; Jasmine; Karma; Grunt</tags>

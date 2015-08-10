@@ -1,5 +1,0 @@
-F:\Bitbucket\karmagruntjsunit.msbuild\source\KarmaGruntErrorReporter.MSBuild\bin\Debug\KarmaGruntErrorReporter.MSBuild.dll
-F:\Bitbucket\karmagruntjsunit.msbuild\source\KarmaGruntErrorReporter.MSBuild\bin\Debug\KarmaGruntErrorReporter.MSBuild.pdb
-F:\Bitbucket\karmagruntjsunit.msbuild\source\KarmaGruntErrorReporter.MSBuild\obj\Debug\KarmaGruntErrorReporter.MSBuild.dll
-F:\Bitbucket\karmagruntjsunit.msbuild\source\KarmaGruntErrorReporter.MSBuild\obj\Debug\KarmaGruntErrorReporter.MSBuild.pdb
-F:\Bitbucket\karmagruntjsunit.msbuild\source\KarmaGruntErrorReporter.MSBuild\obj\Debug\KarmaGruntErrorReporter.MSBuild.csprojResolveAssemblyReference.cache

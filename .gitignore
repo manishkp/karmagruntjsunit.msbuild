@@ -4,3 +4,4 @@ source/packages/
 source/Test/obj/
 source/Test/bin/
 source/Test/test-results.testxml
+source/KarmaGruntErrorReporter.MSBuild/obj/

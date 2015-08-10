@@ -16,6 +16,7 @@
  <Target Name="ShowResults" DependsOnTargets="RunGrunt">    
     <!-- Run the StyleCop MSBuild task. -->
     <GruntErrorReporterTask
+	  ContinueOnError="ErrorAndContinue"
       ProjectFullPath="$(MSBuildProjectDirectory)"
       GruntOutput ="$(GruntOutput)">
     </GruntErrorReporterTask>
